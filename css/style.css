@@ -6,6 +6,8 @@
     --nav-footer-color: #0D0B0E;
     --paragraph-color: #FFF6EE;
     --title-color: #F3DCC7;
+    --border-color:#D3A742;
+    --hover-color:#FEBA8B;
 
     --body-font: 'Roboto', sans-serif;
 
@@ -27,22 +29,199 @@ header, footer{
     background-color: var(--nav-footer-color);
 }
 
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:0 60px;
+    width: 37%;
+}
+
+.nav_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_item img{
+    display: none;
+}
+
 nav a{
     text-decoration: none;
     color: var(--paragraph-color);
-    font-size:25px
+    font-size:25px;
+    padding-left: 5px;
+}
+
+nav a:hover{
+    color: var(--hover-color);
 }
 
 h1{
     color: var(--title-color);
+    font-size: 40px;
+}
+
+.banner{
+    position: relative;
+}
+
+.banner_information{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to left,rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.326), rgba(0, 0, 0, 0.188));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: end;
+    padding: 50px 100px 50px 50%;
+    font-size: 23px;
 }
 
 .banner_background{
     width: 100%;
 }
 
+.banner_information img{
+    width: 100%;
+}
+
+.buttton_container h4{
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.button_netflix{
+    background-color: black;
+    padding: 0px 50px;
+    border: 1px solid var(--border-color);
+}
+
+.story_summary{
+    background: url('/assets/img/index/story_background.png') no-repeat center/cover;
+    padding:80px 30% 80px 0px;
+}
+
+.story_summary img{
+    width: 100%;
+}
+
+.story_summary h1{
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+.story_summary p{
+    font-size: 22px;
+    margin: 40px auto;
+    width: 90%;
+}
+
+.characters, .episodes{
+    text-align: center;
+    padding: 40px;
+}
+
+
+.characters_summary{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background: url('/assets/img/index/vector-bg.png') no-repeat center/cover;
+    background-position-y: 200px
+}
+
+.character h2{
+    font-size: 35px;
+    margin-top: 30px;
+}
+
+.characters_summary img{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    padding: 10px;
+    background: linear-gradient(#804524, #92613D, #D29466, #804524);
+}
+
+.controls{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    margin: -80px auto auto auto;
+}
+
+.controls i{
+    font-size: 40px;
+}
+
+.back{
+    transform: rotate(180deg);
+}
+
+.episodes-list{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.episodes{
+    background: url('/assets/img/index/episodes_background.png');
+}
+
+.episode{
+    border: 1px solid #92613D;
+    position: relative;
+}
+
+.episode_description{
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.line{
+    width: 65%;
+}
+
+.episodes button{
+    background-color: var(--blue-color);
+    padding: 15px 40px;
+    color: white;
+    border: 1px solid var(--border-color);
+    font-size: 22px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px 40px 80px;
+}
+
+.social_media{
+    width: 50%;
+    margin: auto auto -10px;
+}
+
 .social_media i{
     color: white;
+    font-size: 25px;
+    margin: 10px 10px 0px 10px;
 }
 
 
