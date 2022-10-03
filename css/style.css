@@ -66,6 +66,7 @@ nav a:hover{
 h1{
     color: var(--title-color);
     font-size: 40px;
+    text-align: center;
 }
 
 .banner{
@@ -192,10 +193,11 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 10px 20px;
 }
 
 .line{
-    width: 65%;
+    width: 70%;
 }
 
 .episodes button{
@@ -225,3 +227,57 @@ footer{
 }
 
 
+/*---------------------EPISODIOS-------------------------*/
+
+.episodes-banner img{
+    width: 100%;
+}
+
+.episodes_container{
+    background: url('/assets/img/episodes/vector-bg.svg') no-repeat center/cover;
+}
+
+.episodes_all{
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.episode_card{
+    border:0.5px solid #cab2a345;
+    width: 450px;
+    min-width: 400px;
+    margin: 15px;
+}
+
+.episode_card img{
+    width: 100%;
+    position: relative;
+    border-bottom: 0.5px solid #cab2a345;
+}
+
+.episode_head{
+    position: relative;
+}
+
+.episode_name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.episode_information{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.episode_description_card{
+    padding: 10px 14px;
+}
