@@ -234,7 +234,8 @@ footer{
 }
 
 .episodes_container{
-    background: url('/assets/img/episodes/vector-bg.svg') no-repeat center/cover;
+    background: url('/assets/img/episodes/vector-bg.svg') no-repeat center/contain;
+    padding: 80px 0;
 }
 
 .episodes_all{
@@ -249,6 +250,7 @@ footer{
     width: 450px;
     min-width: 400px;
     margin: 15px;
+    background-color: #0E0D0F;
 }
 
 .episode_card img{
@@ -278,6 +280,66 @@ footer{
     padding: 10px 20px;
 }
 
+.episode_information h3{
+    color: var(--title-color);
+    opacity: 0.8;
+    font-size:22px;
+}
+
 .episode_description_card{
     padding: 10px 14px;
+}
+
+.episode_description_card p{
+    font-size: 18px;
+    color: var(--paragraph-color);
+    opacity: 0.8;
+}
+
+
+/*--------------PERSONAJES---------------------*/
+
+
+.characters_container{
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: url('/assets/img/characters/characters_bg.png') no-repeat center/cover;
+}
+
+.character_card{
+    width: 300px;
+    height: 400px;
+    margin: 15px;
+    position: relative;
+}
+
+.character_card img{
+    width: 100%;
+    
+}
+
+.character_card .container_description{
+    border-right: 300px solid rgb(0, 0, 0);
+    border-top: 25px solid transparent;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+}
+
+.character_description{
+    position: relative;
+    bottom: 0;
+    text-align: end;
+    padding: 0 25px;
+}
+
+.character_description h2{
+    font-size: 40px;
+}
+
+.character_description p{
+    display: none;
 }
