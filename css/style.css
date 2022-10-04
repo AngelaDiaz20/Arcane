@@ -8,6 +8,7 @@
     --title-color: #F3DCC7;
     --border-color:#D3A742;
     --hover-color:#FEBA8B;
+    --transition-hover:400ms;
 
     --body-font: 'Roboto', sans-serif;
 
@@ -55,7 +56,7 @@ nav img{
 
 .nav_item img{
     opacity: 0;
-    transition-duration: 400ms;
+    transition-duration: var(--transition-hover);
 }
 
 nav a{
@@ -265,7 +266,7 @@ h1{
 
 .hide{
     opacity: 0;
-    transition: 200ms;
+    transition-duration:200ms;
 }
 
 .episode_container:hover{
@@ -273,7 +274,7 @@ h1{
     box-shadow: 2px 2px 4px #d295665c;
 }
 
-.episode_container:hover .hide{
+.episode_container:hover .hide, .episode_card:hover .hide{
     opacity: 1;
 
 }
@@ -300,7 +301,7 @@ footer{
 
 footer img{
     opacity: 0.7;
-    transition-duration: 400ms;
+    transition-duration: var(--transition-hover);
 }
 
 footer img:hover{
@@ -316,7 +317,7 @@ footer img:hover{
     color: white;
     font-size: 25px;
     margin: 10px 10px 0px 10px;
-    transition-duration: 400ms;
+    transition-duration: var(--transition-hover);
 }
 
 .social_media i:hover{
@@ -348,6 +349,12 @@ footer img:hover{
     min-width: 400px;
     margin: 15px;
     background-color: #0E0D0F;
+}
+
+.episode_card:hover{
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 4px #d295665c;
+    transition-duration: var(--transition-hover);
 }
 
 .episode_card img{
@@ -419,20 +426,38 @@ footer img:hover{
     height: 400px;
     margin: 15px;
     position: relative;
+    overflow: hidden;
 }
 
 .character_card img{
     width: 100%;
-    
+    transition: all 500ms ease-out;
+}
+
+.character_card:hover img{
+    transform: scale(1.2);
 }
 
 .character_card .container_description{
-    border-right: 300px solid rgb(0, 0, 0);
+    border-right: 320px solid rgb(0, 0, 0);
     border-top: 25px solid transparent;
     width: 100%;
     height: 100px;
     position: absolute;
     bottom: 0;
+    transition: all 500ms ease-out;
+}
+
+.character_card:hover .container_description{
+    height: 150px;
+}
+
+.character_card:hover .character_description{
+    transform: translateY(-60px);
+}
+
+.character_card:hover p{
+    display: block;
 }
 
 .character_description{
@@ -440,6 +465,8 @@ footer img:hover{
     bottom: 0;
     text-align: end;
     padding: 0 25px;
+    transition: all 500ms ease-out;
+
 }
 
 .character_description h2{
