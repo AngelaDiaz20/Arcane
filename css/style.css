@@ -304,12 +304,17 @@ footer{
     font-size: 23px;
 }
 
+.characterss{
+    background: url('/assets/img/characters/characters_bg.png') no-repeat center/cover;
+    padding-top: 40px;
+}
+
 .characters_container{
+    background: url('/assets/img/episodes/vector-bg.svg') no-repeat center/contain;
     padding: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background: url('/assets/img/characters/characters_bg.png') no-repeat center/cover;
 }
 
 .character_card{
@@ -367,6 +372,7 @@ footer{
     position: absolute;
     width: 68%;
     height: 100%;
+    padding: 100px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -379,6 +385,14 @@ footer{
     left: 0;
 }
 
+.vector_rotate_right{
+    transform: rotate(259.5deg);
+    width: 800px;
+    position: absolute;
+    bottom: 48%;
+    right: 8%;
+}
+
 .character_information p{
     width: 80%;
     margin: 0 auto;
@@ -388,11 +402,18 @@ footer{
     display: flex;
     align-items: center;
     width: 260px;
+    cursor: pointer;
 }
 
 .character_information button img{
     width: 32px;
     margin-left:10px;
+}
+
+.characters_main a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--paragraph-color);
 }
 
 .jinx_information img{
@@ -442,4 +463,26 @@ footer{
 .character_information button img{
     width: 32px;
     margin-left:10px;
+}
+
+.vector_rotate_left{
+    transform: rotate(-259.5deg);
+    width: 800px;
+    position: absolute;
+    bottom: 48%;
+    left: 7%;
+}
+
+.arrow_up{
+    position: fixed;
+    z-index: 10;
+    background-color: var(--blue-color);
+    font-size: 30px;
+    color: var(--border-color);
+    padding: 10px 17px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
 }
