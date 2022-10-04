@@ -65,8 +65,9 @@ nav a:hover{
 
 h1{
     color: var(--title-color);
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
+    text-shadow: 1px 1px 2px black;
 }
 
 .banner{
@@ -121,6 +122,7 @@ h1{
     width: 70%;
     text-align: center;
     margin: auto;
+    font-size: 40px;
 }
 
 .story_summary p{
@@ -486,3 +488,54 @@ footer{
     right: 40px;
     cursor: pointer;
 }
+
+
+/*---------------------HISTORIA-----------------------*/
+
+.story_container{
+    font-size: 23px;
+}
+
+.story_container h2{
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+.story{
+    background: url('/assets/img/index/story_background.png') no-repeat center/Cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7%;
+}
+
+.story p{
+    text-align: center;
+    width: 80%;
+    margin: 40px;
+}
+
+.story_piltover{
+    background: url('/assets/img/story/bg-piltover2.png') no-repeat center/Cover;
+    display: flex;
+    flex-direction: column;
+    padding: 7%;
+}
+
+.story_piltover p, .story_zaun p{
+    width: 55%;
+    margin: 40px;
+}
+
+.story_zaun{
+    background: url('/assets/img/story/bg-zaun2.png') no-repeat center/Cover;
+    display: flex;
+    flex-direction: column;
+    padding: 7%;
+}
+
+.story_zaun p{
+    text-align: right;
+    align-self:flex-end;
+}
+
