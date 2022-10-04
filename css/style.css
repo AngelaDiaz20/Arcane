@@ -200,7 +200,7 @@ h1{
     width: 70%;
 }
 
-.episodes button{
+.episodes button, .character_information button{
     background-color: var(--blue-color);
     padding: 15px 40px;
     color: white;
@@ -299,6 +299,10 @@ footer{
 
 /*--------------PERSONAJES---------------------*/
 
+.characters_main{
+    background-color: white;
+    font-size: 23px;
+}
 
 .characters_container{
     padding: 40px;
@@ -342,4 +346,100 @@ footer{
 
 .character_description p{
     display: none;
+}
+
+.information_container{
+    border-bottom: 800px solid var(--dark-blue-color);
+    border-right: 150px solid transparent;
+    height: 0;
+    width: 74%;
+    position: absolute;
+    left: 0;
+}
+
+.character_right{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+}
+
+.character_information{
+    position: absolute;
+    width: 68%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #804524;
+    background: url('/assets/img/characters/bg-arcane.png') no-repeat bottom;
+}
+
+.information_right{
+    left: 0;
+}
+
+.character_information p{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.character_information button{
+    display: flex;
+    align-items: center;
+    width: 260px;
+}
+
+.character_information button img{
+    width: 32px;
+    margin-left:10px;
+}
+
+.jinx_information img{
+    width: 100%;
+}
+
+.jinx_information{
+    background: #020204;
+    height: 800px;
+}
+
+.jinx_information p{
+    width: 80%;
+    margin:auto;
+    padding: 100px 0;
+}
+
+.character_left{
+    display: flex;
+    position: relative;
+}
+
+.information_container_left{
+    border-bottom: 800px solid var(--dark-blue-color);
+    border-left: 150px solid transparent;
+    height: 0;
+    width: 74%;
+    position: absolute;
+    right: 0;
+}
+
+.information_left{
+    right: 0;
+}
+
+.character_information p{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.character_information button{
+    display: flex;
+    align-items: center;
+    width: 260px;
+}
+
+.character_information button img{
+    width: 32px;
+    margin-left:10px;
 }
