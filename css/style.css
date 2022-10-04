@@ -42,14 +42,20 @@ nav{
     width: 37%;
 }
 
+nav img{
+    height: 100%;
+}
+
 .nav_item{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10px;
 }
 
 .nav_item img{
-    display: none;
+    opacity: 0;
+    transition-duration: 400ms;
 }
 
 nav a{
@@ -59,8 +65,12 @@ nav a{
     padding-left: 5px;
 }
 
-nav a:hover{
+.nav_item:hover a{
     color: var(--hover-color);
+}
+
+.nav_item:hover img{
+    opacity: 1;
 }
 
 h1{
@@ -105,8 +115,13 @@ h1{
 
 .button_netflix{
     background-color: black;
-    padding: 0px 50px;
+    padding: 0px 80px;
     border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.button_netflix img{
+    height: 55px;
 }
 
 .story_summary{
@@ -176,7 +191,7 @@ h1{
 .episodes-list{
     display: flex;
     justify-content: space-around;
-    padding: 40px;
+    padding: 80px 40px 40px;
 }
 
 .episodes{
@@ -184,22 +199,87 @@ h1{
 }
 
 .episode{
-    border: 1px solid #92613D;
     position: relative;
+    width: 450px;
+    
+}
+
+.episode img{
+    width: 100%;    
+    border: 1px solid #92613D;
+}
+
+.episode_container{
+    width: 450px;
+}
+
+.episode_summary{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.episode h3{
+    text-align: left;
+    display: none;
 }
 
 .episode_description{
     width: 100%;
-    position: absolute;
-    top: 5px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
-    padding: 10px 20px;
 }
 
 .line{
     width: 70%;
+}
+
+.layer{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000074;
+}
+
+.layer i{
+    font-size: 100px;
+}
+
+.text_description{
+    background-color: var(--dark-blue-color);
+    margin-top: -5px;
+    border: 1px solid #92613D;
+    height: 108px;
+    text-align: left;
+}
+
+.hide{
+    opacity: 0;
+    transition: 200ms;
+}
+
+.episode_container:hover{
+    transform: translateY(-60px);
+    box-shadow: 2px 2px 4px #d295665c;
+}
+
+.episode_container:hover .hide{
+    opacity: 1;
+
+}
+
+.episode_container:hover .episode h3{
+    display: block;
 }
 
 .episodes button, .character_information button{
@@ -208,6 +288,7 @@ h1{
     color: white;
     border: 1px solid var(--border-color);
     font-size: 22px;
+    cursor: pointer;
 }
 
 footer{
@@ -215,6 +296,15 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding: 40px 0px 40px 80px;
+}
+
+footer img{
+    opacity: 0.7;
+    transition-duration: 400ms;
+}
+
+footer img:hover{
+    opacity: 1;
 }
 
 .social_media{
@@ -226,8 +316,13 @@ footer{
     color: white;
     font-size: 25px;
     margin: 10px 10px 0px 10px;
+    transition-duration: 400ms;
 }
 
+.social_media i:hover{
+    color: var(--hover-color);
+    transform: translateY(-2px)
+}
 
 /*---------------------EPISODIOS-------------------------*/
 
@@ -282,7 +377,7 @@ footer{
     padding: 10px 20px;
 }
 
-.episode_information h3{
+.episode_information h3, .episode h3{
     color: var(--title-color);
     opacity: 0.8;
     font-size:22px;
@@ -412,7 +507,7 @@ footer{
     margin-left:10px;
 }
 
-.characters_main a{
+.characters_main a, a{
     text-decoration: none;
     cursor: pointer;
     color: var(--paragraph-color);
