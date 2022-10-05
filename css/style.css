@@ -33,6 +33,7 @@ header, footer{
 nav{
     display: flex;
     justify-content: space-between;
+    z-index: 20;
 }
 
 .nav_items{
@@ -83,6 +84,7 @@ h1{
 
 .banner{
     position: relative;
+    display: none;
 }
 
 .banner_information{
@@ -152,6 +154,14 @@ h1{
     padding: 40px;
 }
 
+.characters{
+    overflow: hidden;
+}
+
+.vector{
+    width: 95%;
+}
+
 
 .characters_summary{
     display: flex;
@@ -171,6 +181,7 @@ h1{
     width: 350px;
     border-radius: 50%;
     padding: 10px;
+    margin: 0 20px;
     background: linear-gradient(#804524, #92613D, #D29466, #804524);
 }
 
@@ -192,6 +203,7 @@ h1{
 .episodes-list{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding: 80px 40px 40px;
 }
 
@@ -201,8 +213,8 @@ h1{
 
 .episode{
     position: relative;
-    width: 450px;
-    
+    max-width: 450px;
+    min-width: 350px;
 }
 
 .episode img{
@@ -211,7 +223,9 @@ h1{
 }
 
 .episode_container{
-    width: 450px;
+    max-width: 450px;
+    min-width: 350px;
+    margin: 0 20px;
 }
 
 .episode_summary{
@@ -250,6 +264,7 @@ h1{
     align-items: center;
     justify-content: center;
     background-color: #00000074;
+    transition: all ease-out 500ms;
 }
 
 .layer i{
@@ -296,6 +311,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 40px 0px 40px 80px;
 }
 
@@ -352,9 +368,8 @@ footer img:hover{
 }
 
 .episode_card:hover{
-    transform: translateY(-5px);
     box-shadow: 2px 2px 4px #d295665c;
-    transition-duration: var(--transition-hover);
+    transition:all ease-out 500ms;
 }
 
 .episode_card img{
@@ -427,6 +442,20 @@ footer img:hover{
     margin: 15px;
     position: relative;
     overflow: hidden;
+    animation: appear 600ms;
+}
+
+@keyframes appear{
+    0%{
+        transform: translateY(-10px);
+        opacity: 0.3;
+        /*transform: scale(0.8)*/
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+        /*transform: scale(1);*/
+    }
 }
 
 .character_card img{
@@ -517,6 +546,24 @@ footer img:hover{
     right: 8%;
 }
 
+.vector_rotate_left{
+    transform: rotate(-259.5deg);
+    width: 800px;
+    position: absolute;
+    bottom: 48%;
+    left: 8%;
+}
+
+@media screen and (min-width:1000px)and  (max-width:1400px){
+    .vector_rotate_right{
+        right: 1.5%;
+    }
+
+    .vector_rotate_left{
+        left: 1.5%;
+    }
+}
+
 .character_information p{
     width: 80%;
     margin: 0 auto;
@@ -589,13 +636,7 @@ footer img:hover{
     margin-left:10px;
 }
 
-.vector_rotate_left{
-    transform: rotate(-259.5deg);
-    width: 800px;
-    position: absolute;
-    bottom: 48%;
-    left: 7%;
-}
+
 
 .arrow_up{
     position: fixed;
@@ -631,10 +672,15 @@ footer img:hover{
     padding: 7%;
 }
 
+.story h1, .story img{
+    animation: move 800ms;
+}
+
 .story p{
     text-align: center;
     width: 80%;
     margin: 40px;
+    animation: appear 800ms 800ms backwards;
 }
 
 .story_piltover{
@@ -659,5 +705,59 @@ footer img:hover{
 .story_zaun p{
     text-align: right;
     align-self:flex-end;
+}
+
+@keyframes move{
+    0%{
+        transform: translateY(-50%);
+        opacity: 0;
+        /*transform: scale(0.8)*/
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+        /*transform: scale(1);*/
+    }
+}
+
+
+video{
+    width: 100%;
+    margin-top: -120px;
+}
+
+.banner_video{
+    height: 680px;
+    overflow: hidden;
+    position: relative;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+#pause:checked ~ .banner_video{
+    display: none;
+}
+
+#pause:checked ~ .banner{
+    display: block;
+}
+
+#pause:checked ~ .label_pause{
+    display: none;
+}
+
+.label_pause{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.312);
+    bottom: 70px;
+    left: 50px;
+    z-index: 10;
 }
 
