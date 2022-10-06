@@ -62,13 +62,6 @@ nav img{
     transition-duration: var(--transition-hover);
 }
 
-nav a{
-    text-decoration: none;
-    color: var(--paragraph-color);
-    font-size:25px;
-    padding-left: 5px;
-}
-
 .nav_item:hover a{
     color: var(--hover-color);
 }
@@ -77,16 +70,20 @@ nav a{
     opacity: 1;
 }
 
+nav a{
+    text-decoration: none;
+    color: var(--paragraph-color);
+    font-size:25px;
+    padding-left: 5px;
+}
+
+
+
 h1{
     color: var(--title-color);
     font-size: 50px;
     text-align: center;
     text-shadow: 1px 1px 2px black;
-}
-
-.banner{
-    position: relative;
-    display: none;
 }
 
 .banner_information{
@@ -103,6 +100,51 @@ h1{
     padding: 50px 100px 50px 50%;
     font-size: 23px;
 }
+
+video{
+    width: 100%;
+    margin-top: -120px;
+}
+
+.banner{
+    position: relative;
+    display: none;
+}
+
+.banner_video{
+    height: 680px;
+    overflow: hidden;
+    position: relative;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+#pause:checked ~ .banner_video, #pause:checked ~ .label_pause{
+    display: none;
+}
+
+#pause:checked ~ .banner{
+    display: block;
+}
+
+
+.label_pause{
+    position: absolute;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.673);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.312);
+    bottom: 70px;
+    left: 50px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.label_pause:hover{
+    color: white;
+}
+
 
 .banner_background{
     width: 100%;
@@ -488,7 +530,7 @@ footer img:hover{
 }
 
 .character_card:hover img{
-    transform: scale(1.2);
+transform: scale(1.2);
 }
 
 .character_card .container_description{
@@ -753,44 +795,3 @@ footer img:hover{
 }
 
 
-video{
-    width: 100%;
-    margin-top: -120px;
-}
-
-.banner_video{
-    height: 680px;
-    overflow: hidden;
-    position: relative;
-}
-
-input[type=radio]{
-    display: none;
-}
-
-#pause:checked ~ .banner_video{
-    display: none;
-}
-
-#pause:checked ~ .banner{
-    display: block;
-}
-
-#pause:checked ~ .label_pause{
-    display: none;
-}
-
-.label_pause{
-    position: absolute;
-    font-size: 50px;
-    color: rgba(255, 255, 255, 0.673);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.312);
-    bottom: 70px;
-    left: 50px;
-    z-index: 10;
-    cursor: pointer;
-}
-
-.label_pause:hover{
-    color: white;
-}
