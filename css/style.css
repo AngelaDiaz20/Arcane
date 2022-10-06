@@ -112,7 +112,7 @@ video{
 }
 
 .banner_video{
-    height: 680px;
+    height: 620px;
     overflow: hidden;
     position: relative;
 }
@@ -181,7 +181,7 @@ input[type=radio]{
 }
 
 .story_summary{
-    background: url('/assets/img/index/story_background.png') no-repeat center/cover;
+    background: url('../assets/img/index/story_background.png') no-repeat center/cover;
     padding:80px 30% 80px 0px;
 }
 
@@ -220,7 +220,7 @@ input[type=radio]{
     display: flex;
     justify-content: space-around;
     padding: 40px;
-    background: url('/assets/img/index/vector-bg.png') no-repeat center/cover;
+    background: url('../assets/img/index/vector-bg.png') no-repeat center/cover;
     background-position-y: 200px
 }
 
@@ -262,16 +262,16 @@ input[type=radio]{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 80px 40px 40px;
+    padding: 80px 40px 0px 40px;
 }
 
 .episodes{
-    background: url('/assets/img/index/episodes_background.png');
+    background: url('../assets/img/index/episodes_background.png');
 }
 
 .episode{
     position: relative;
-    max-width: 450px;
+    max-width: 410px;
     min-width: 350px;
 }
 
@@ -281,7 +281,7 @@ input[type=radio]{
 }
 
 .episode_container{
-    max-width: 450px;
+    max-width: 410px;
     min-width: 350px;
     margin: 0 20px;
 }
@@ -414,7 +414,7 @@ footer img:hover{
 }
 
 .episodes_container{
-    background: url('/assets/img/episodes/vector-bg.svg') no-repeat center/contain;
+    background: url('../assets/img/episodes/vector-bg.svg') no-repeat center/contain;
     padding: 80px 0;
 }
 
@@ -427,7 +427,7 @@ footer img:hover{
 
 .episode_card{
     border:0.5px solid #cab2a345;
-    width: 450px;
+    width: 410px;
     min-width: 400px;
     margin: 15px;
     background-color: #0E0D0F;
@@ -490,12 +490,12 @@ footer img:hover{
 }
 
 .characterss{
-    background: url('/assets/img/characters/characters_bg.png') no-repeat center/cover;
+    background: url('../assets/img/characters/characters_bg.png') no-repeat center/cover;
     padding-top: 40px;
 }
 
 .characters_container{
-    background: url('/assets/img/episodes/vector-bg.svg') no-repeat center/contain;
+    background: url('../assets/img/episodes/vector-bg.svg') no-repeat center/contain;
     padding: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -576,7 +576,7 @@ transform: scale(1.2);
     border-bottom: 800px solid var(--dark-blue-color);
     border-right: 150px solid transparent;
     height: 0;
-    width: 74%;
+    width: 71%;
     position: absolute;
     left: 0;
 }
@@ -597,7 +597,7 @@ transform: scale(1.2);
     align-items: center;
     justify-content: space-around;
     background-color: #804524;
-    background: url('/assets/img/characters/bg-arcane.png') no-repeat bottom;
+    background: url('../assets/img/characters/bg-arcane.png') no-repeat bottom;
 }
 
 .information_right{
@@ -620,7 +620,7 @@ transform: scale(1.2);
     left: 8%;
 }
 
-@media screen and (min-width:1000px)and  (max-width:1400px){
+/*@media screen and (min-width:1000px)and  (max-width:1400px){
     .vector_rotate_right{
         right: 1.5%;
     }
@@ -628,7 +628,7 @@ transform: scale(1.2);
     .vector_rotate_left{
         left: 1.5%;
     }
-}
+}*/
 
 .character_information p{
     width: 80%;
@@ -682,7 +682,7 @@ transform: scale(1.2);
     border-bottom: 800px solid var(--dark-blue-color);
     border-left: 150px solid transparent;
     height: 0;
-    width: 74%;
+    width: 71%;
     position: absolute;
     right: 0;
 }
@@ -736,7 +736,7 @@ transform: scale(1.2);
 }
 
 .story{
-    background: url('/assets/img/index/story_background.png') no-repeat center/Cover;
+    background: url('../assets/img/index/story_background.png') no-repeat center/Cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -755,7 +755,7 @@ transform: scale(1.2);
 }
 
 .story_piltover{
-    background: url('/assets/img/story/bg-piltover2.png') no-repeat center/Cover;
+    background: url('../assets/img/story/bg-piltover2.png') no-repeat center/Cover;
     display: flex;
     flex-direction: column;
     padding: 7%;
@@ -767,7 +767,7 @@ transform: scale(1.2);
 }
 
 .story_zaun{
-    background: url('/assets/img/story/bg-zaun2.png') no-repeat center/Cover;
+    background: url('../assets/img/story/bg-zaun2.png') no-repeat center/Cover;
     display: flex;
     flex-direction: column;
     padding: 7%;
