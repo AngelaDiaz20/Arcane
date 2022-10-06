@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 :root{
     --dark-blue-color: #141215;
@@ -11,7 +12,7 @@
     --transition-hover:400ms;
 
     --body-font: 'Roboto', sans-serif;
-
+    --nav-font: 'Fredericka the Great', cursive;
 }
 
 *{
@@ -34,6 +35,7 @@ nav{
     display: flex;
     justify-content: space-between;
     z-index: 20;
+    font-family: var(--nav-font);
 }
 
 .nav_items{
